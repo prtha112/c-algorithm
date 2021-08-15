@@ -25,9 +25,9 @@ int binarySearch(int arr[], int left, int right, int find, int counter)
 
 int main()
 {
-    int arr[] = {1, 2, 3, 5, 6, 9, 10, 12, 15, 44, 56};
+    int arr[] = {1, 2, 3, 5, 6, 9, 10, 12, 15, 44, 56, 57, 67, 68, 80, 90, 100, 234};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int find = 15;
+    int find = 100;
     int i;
     int result = binarySearch(arr, 0, n - 1, find, 0);
     cout << "Found in position : " << result << " ,Result is : " << arr[result];
