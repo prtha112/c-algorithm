@@ -1,28 +1,25 @@
 #include <iostream>
 
 using namespace std;
-
-void swap(int *position1, int *position2) 
-{ 
-    int temp = *position1; 
-    *position1 = *position2; 
-    *position2 = temp; 
-} 
  
 int partition (int arr[], int low, int high)
 {
     int pivot = arr[high];   
     int i = (low - 1);  
- 
+    int temp;
     for (int j = low; j <= high- 1; j++)
     {
         if (arr[j] <= pivot)
         {
             i++;    
-            swap(&arr[i], &arr[j]);
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
     }
-    swap(&arr[i + 1], &arr[high]);
+    temp = arr[i+1];
+    arr[i+1] = arr[high];
+    arr[high] = temp;
     return (i + 1);
 }
 
